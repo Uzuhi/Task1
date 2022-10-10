@@ -1,0 +1,19 @@
+package nes;
+
+import java.io.PrintStream;
+import java.util.Scanner;
+public class Remainder {
+	public static void main(String[] args) 
+		throws java.io.UnsupportedEncodingException	
+	{
+		PrintStream ps = new PrintStream(System.out, true, "UTF-8"); 
+		Scanner s = new Scanner(System.in);
+		int first_side = s.nextInt();
+		int second_side = s.nextInt();
+		ps.print("Остаток = " + remainder(first_side, second_side));
+	}
+	public static int remainder(int a, int b) {
+		int c = a%b;
+		return c;
+	}
+}
