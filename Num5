@@ -1,0 +1,32 @@
+package nes;
+
+import java.io.PrintStream;
+import java.util.Scanner;
+
+public class Operation {
+	public static void main(String[] args) 
+		throws java.io.UnsupportedEncodingException	
+	{
+		PrintStream ps = new PrintStream(System.out, true, "UTF-8"); 
+		Scanner s = new Scanner(System.in);
+		int N = s.nextInt();
+		int a = s.nextInt();
+		int b = s.nextInt();
+		operation(a, b, N);
+	}
+	public static void operation(int a, int b, int c) 
+		throws java.io.UnsupportedEncodingException		
+	{
+		PrintStream ps = new PrintStream(System.out, true, "UTF-8"); 	
+		if (a+b == c)
+			ps.println("+");
+		else if (a-b == c)
+			ps.println("-");
+		else if (a*b == c)
+			ps.println("*");
+		else if (a/b == c)
+			ps.println("/");
+		else
+			ps.println("NONE");
+	}
+}
